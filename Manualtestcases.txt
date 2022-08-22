@@ -1,0 +1,22 @@
+*Verify Customer not registered cant comment
+Given i navigate to the BBC website
+And i click on a story with message icon
+And i click on the comment icon
+When i click on reply button
+Then the register button is shown 
+
+
+*Verify that a signed in customer can comment 
+Given i navigate to BBC website
+And i click the sign in link 
+And input correct login details
+And i click on the comment icon
+When i click on reply button
+Then i am able to input details
+
+
+*Verify that a customer cant input information on a disabled comment section
+Given i navigate to BBC website
+And i am on a story that has its comment disabled
+Then i cant input informatioin in the disabled comment section
+
